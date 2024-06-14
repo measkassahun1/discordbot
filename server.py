@@ -2,19 +2,14 @@
 import discord
 import os
 import random
-from dotenv import load_dotenv
-from ec2_metadata import ec2_metadata
+from ec2_metadata import ec2_metadata 
 
-# Initializing Variables
-load_dotenv()
+print(ec2_metadata.region)
+print(ec2_metadata.instance_id)
 
-# Define intents
-intents = discord.Intents.default()
-intents.message_content = True
 
-# Initialize the client with intents
-client = discord.Client(intents=intents)
-token = os.getenv('TOKEN')
+client = discord.Bot()
+token = str(os.getenv('TOKEN'))
 
 # Initializing Bot
 @client.event
