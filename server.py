@@ -7,8 +7,10 @@ from ec2_metadata import ec2_metadata
 print(ec2_metadata.region)
 print(ec2_metadata.instance_id)
 
+intents = discord.Intents.default()
+intents.message_content = True
 
-client = discord.Client()
+client = discord.Client(intents=intents)
 token = str(os.getenv('TOKEN'))
 
 # Initializing Bot
