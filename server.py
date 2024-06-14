@@ -39,7 +39,7 @@ async def on_message(message):
         elif user_message.lower() == "hey pookie":
             await message.channel.send(f'Purr {username}')
         elif user_message.lower() == "ec2 data":
-            await message.channel.send(f'Your instance data is {ec2_metadata.region + ec2_metadata.instance_id}')
+            await message.channel.send(f'Your instance data is {ec2_metadata.region} + {ec2_metadata.instance_id}')
         else:
             await message.channel.send("Error")
       
