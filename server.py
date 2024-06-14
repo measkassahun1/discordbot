@@ -4,10 +4,11 @@ import os
 import random
 from ec2_metadata import ec2_metadata 
 
-print(ec2_metadata.region)
-print(ec2_metadata.instance_id)
+print('ec2_metadata.region', ec2_metadata.region)
+print('ec2_metadata.instance_id', ec2_metadata.instance_id)
 
 intents = discord.Intents.default()
+intents.messages = True
 intents.message_content = True
 
 client = discord.Client(intents=intents)
@@ -38,7 +39,9 @@ async def on_message(message):
         elif user_message.lower() == "hey pookie":
             await message.channel.send(f'Purr {username}')
         elif user_message.lower() == "ec2 data":
-            await message.channel.send("Your instance data is" + ec2_metadata.region,"and" + ec2_metadata.instance_id)
+            await message.channel.send("Your instance data is" + ec2_metadata.region + ec2_metadata.instance_id)
+        else:
+            await message.channel.send("Error")
       
 
 # Run the bot with token
