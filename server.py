@@ -38,9 +38,8 @@ async def on_message(message):
         elif user_message.lower() == "hey pookie":
             await message.channel.send(f'Purr {username}')
         elif user_message.lower() == "ec2 data":
-            await message.channel.send(f'Your instance data is {ec2_metadata.instance} Your EC2 Data: {ec2_metadata.region}')
-        else:
-            await message.channel.send("Error")
+            await message.channel.send("Your instance data is" + ec2_metadata.region)
+      
 
 # Run the bot with token
 client.run(token)
