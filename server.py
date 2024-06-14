@@ -30,7 +30,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     
-    if channel == "random":
+    if channel == "general":
         if user_message.lower() == "hello" or user_message.lower() == "hi":
             await message.channel.send(f'Hi {username}')
         elif user_message.lower() == "ring":
