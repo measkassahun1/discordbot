@@ -8,7 +8,7 @@ print(ec2_metadata.region)
 print(ec2_metadata.instance_id)
 
 
-client = discord.Bot()
+client = discord.Client()
 token = str(os.getenv('TOKEN'))
 
 # Initializing Bot
