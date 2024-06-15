@@ -1,0 +1,120 @@
+Installed:
+  libxcrypt-compat-4.4.33-7.amzn2023.x86_64                   python3-pip-21.3.1-2.amzn2023.0.7.noarch
+
+Complete!
+[ec2-user@ip-172-31-16-9 ~]$ pip3 install discord.py
+Defaulting to user installation because normal site-packages is not writeable
+Collecting discord.py
+  Downloading discord.py-2.3.2-py3-none-any.whl (1.1 MB)
+     |████████████████████████████████| 1.1 MB 5.2 MB/s
+Collecting aiohttp<4,>=3.7.4
+  Downloading aiohttp-3.9.5-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+     |████████████████████████████████| 1.2 MB 42.4 MB/s
+Collecting yarl<2.0,>=1.0
+  Downloading yarl-1.9.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (304 kB)
+     |████████████████████████████████| 304 kB 48.1 MB/s
+Requirement already satisfied: attrs>=17.3.0 in /usr/lib/python3.9/site-packages (from aiohttp<4,>=3.7.4->discord.py) (20.3.0)
+Collecting multidict<7.0,>=4.5
+  Downloading multidict-6.0.5-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (123 kB)
+     |████████████████████████████████| 123 kB 52.9 MB/s
+Collecting aiosignal>=1.1.2
+  Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting async-timeout<5.0,>=4.0
+  Downloading async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+Collecting frozenlist>=1.1.1
+  Downloading frozenlist-1.4.1-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (240 kB)
+     |████████████████████████████████| 240 kB 50.1 MB/s
+Requirement already satisfied: idna>=2.0 in /usr/lib/python3.9/site-packages (from yarl<2.0,>=1.0->aiohttp<4,>=3.7.4->discord.py) (2.10)
+Installing collected packages: multidict, frozenlist, yarl, async-timeout, aiosignal, aiohttp, discord.py
+Successfully installed aiohttp-3.9.5 aiosignal-1.3.1 async-timeout-4.0.3 discord.py-2.3.2 frozenlist-1.4.1 multidict-6.0.5 yarl-1.9.4
+[ec2-user@ip-172-31-16-9 ~]$ mkdir discord-bot
+[ec2-user@ip-172-31-16-9 ~]$ cd discord-bot
+[ec2-user@ip-172-31-16-9 discord-bot]$ nano bot.py
+[ec2-user@ip-172-31-16-9 discord-bot]$ nano bot.py
+[ec2-user@ip-172-31-16-9 discord-bot]$ nano bot.py
+[ec2-user@ip-172-31-16-9 discord-bot]$ nano bot.py
+[ec2-user@ip-172-31-16-9 discord-bot]$ python3 bot.py
+Traceback (most recent call last):
+  File "/home/ec2-user/discord-bot/bot.py", line 6, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+[ec2-user@ip-172-31-16-9 discord-bot]$ nano bot.py
+[ec2-user@ip-172-31-16-9 discord-bot]$ python3 bot.py
+Traceback (most recent call last):
+  File "/home/ec2-user/discord-bot/bot.py", line 6, in <module>
+    from ec2_metadata import ec2_metadata
+ModuleNotFoundError: No module named 'ec2_metadata'
+[ec2-user@ip-172-31-16-9 discord-bot]$ pip install ec2-metadata
+Defaulting to user installation because normal site-packages is not writeable
+Collecting ec2-metadata
+  Downloading ec2_metadata-2.13.0-py3-none-any.whl (10 kB)
+Requirement already satisfied: requests in /usr/lib/python3.9/site-packages (from ec2-metadata) (2.25.1)
+Requirement already satisfied: chardet<5,>=3.0.2 in /usr/lib/python3.9/site-packages (from requests->ec2-metadata) (4.0.0)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/lib/python3.9/site-packages (from requests->ec2-metadata) (1.25.10)
+Requirement already satisfied: idna<3,>=2.5 in /usr/lib/python3.9/site-packages (from requests->ec2-metadata) (2.10)
+Installing collected packages: ec2-metadata
+Successfully installed ec2-metadata-2.13.0
+[ec2-user@ip-172-31-16-9 discord-bot]$ python3 bot.py
+Traceback (most recent call last):
+  File "/home/ec2-user/discord-bot/bot.py", line 10, in <module>
+    load_dotenv()
+NameError: name 'load_dotenv' is not defined
+[ec2-user@ip-172-31-16-9 discord-bot]$ nano bot.py
+[ec2-user@ip-172-31-16-9 discord-bot]$ python3 bot.py
+Traceback (most recent call last):
+  File "/home/ec2-user/discord-bot/bot.py", line 11, in <module>
+    client = discord.Bot()
+AttributeError: module 'discord' has no attribute 'Bot'
+[ec2-user@ip-172-31-16-9 discord-bot]$ nano bot.py
+[ec2-user@ip-172-31-16-9 discord-bot]$ python3 bot.py
+Traceback (most recent call last):
+  File "/home/ec2-user/discord-bot/bot.py", line 12, in <module>
+    client = discord.Client()
+TypeError: __init__() missing 1 required keyword-only argument: 'intents'
+[ec2-user@ip-172-31-16-9 discord-bot]$ nano bot.py
+[ec2-user@ip-172-31-16-9 discord-bot]$ python3 bot.py
+Traceback (most recent call last):
+  File "/home/ec2-user/discord-bot/bot.py", line 12, in <module>
+    client = discord.Client()
+TypeError: __init__() missing 1 required keyword-only argument: 'intents'
+[ec2-user@ip-172-31-16-9 discord-bot]$ nano bot.py
+[ec2-user@ip-172-31-16-9 discord-bot]$ nano bot.py
+[ec2-user@ip-172-31-16-9 discord-bot]$ python3 bot.py
+Traceback (most recent call last):
+  File "/home/ec2-user/discord-bot/bot.py", line 12, in <module>
+    client = discord.Client()
+TypeError: __init__() missing 1 required keyword-only argument: 'intents'
+[ec2-user@ip-172-31-16-9 discord-bot]$ nano bot.py
+[ec2-user@ip-172-31-16-9 discord-bot]$ ^C
+[ec2-user@ip-172-31-16-9 discord-bot]$ nano bot.py
+[ec2-user@ip-172-31-16-9 discord-bot]$ nano .env
+[ec2-user@ip-172-31-16-9 discord-bot]$ python3 bot.py
+Traceback (most recent call last):
+  File "/home/ec2-user/discord-bot/bot.py", line 5, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+[ec2-user@ip-172-31-16-9 discord-bot]$ nano dotenv
+[ec2-user@ip-172-31-16-9 discord-bot]$ nano .env
+[ec2-user@ip-172-31-16-9 discord-bot]$ rm -f .env
+[ec2-user@ip-172-31-16-9 discord-bot]$ python3 bot.py
+Traceback (most recent call last):
+  File "/home/ec2-user/discord-bot/bot.py", line 5, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+[ec2-user@ip-172-31-16-9 discord-bot]$ rm -f dotenv
+[ec2-user@ip-172-31-16-9 discord-bot]$ mkdir dotenv
+[ec2-user@ip-172-31-16-9 discord-bot]$ cd dotenv
+[ec2-user@ip-172-31-16-9 dotenv]$ nano dotenv
+[ec2-user@ip-172-31-16-9 dotenv]$ python3 bot.py
+python3: can't open file '/home/ec2-user/discord-bot/dotenv/bot.py': [Errno 2] No such file or directory
+[ec2-user@ip-172-31-16-9 dotenv]$ cd discord-bot
+-bash: cd: discord-bot: No such file or directory
+[ec2-user@ip-172-31-16-9 dotenv]$ cd \
+>
+[ec2-user@ip-172-31-16-9 ~]$ cd discord-bot
+[ec2-user@ip-172-31-16-9 discord-bot]$ python3 bot.py
+Traceback (most recent call last):
+  File "/home/ec2-user/discord-bot/bot.py", line 5, in <module>
+    from dotenv import load_dotenv
+ImportError: cannot import name 'load_dotenv' from 'dotenv' (unknown location)
+[ec2-user@ip-172-31-16-9 discord-bot]$
